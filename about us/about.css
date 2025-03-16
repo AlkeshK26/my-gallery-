@@ -1,0 +1,284 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  header {
+    background: #201c1c;
+    color: #161515;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #eee7e7;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    
+}
+nav ul.right{
+    margin-right: 0;
+}
+nav a:hover {
+    color: #ccc;
+    transform: scale(2.05);
+    box-shadow: 10px 10px 20px rgba(11, 11, 11, 0.2);
+  }
+
+   
+  @media (max-width: 768px) {
+    .card {
+      width: calc(50% - 2em);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 100%;
+    }
+  }
+
+  .language-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .language-dropdown div {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .language-dropdown div:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .one {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+  }
+  
+  /* About Hero Section */
+  
+  .about-hero {
+    background-image: linear-gradient(to bottom, #f7f7f7, #fff);
+    padding: 2em;
+    text-align: center;
+  }
+  
+  .about-hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .about-hero p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* About Story Section */
+  
+  .about-story {
+    padding: 2em;
+  }
+  
+  .about-story h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-story p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .about-story img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px 0;
+  }
+  
+  /* About Team Section */
+  
+  .about-team {
+    padding: 2em;
+  }
+  
+  .about-team h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-team ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .about-team li {
+    margin: 20px;
+    width: calc(33.33% - 20px);
+  }
+  
+  .about-team img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px 0;
+  }
+  
+  .about-team h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .about-team p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* About Contact Section */
+  
+  .about-contact {
+    padding: 2em;
+  }
+  
+  .about-contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-contact p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .about-contact ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .about-contact li {
+    margin-bottom: 10px;
+  }
+  
+  .about-contact a {
+    color: #337ab7;
+    text-decoration: none;
+  }
+  
+  .about-contact a:hover {
+    color: #23527c;
+  }
+  
+  /* Footer Styles */
+  .footer-container {
+    background: #201c1c;
+    color: #161515;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+   .footer-container h3{
+    color: #eee7e7;
+  }
+  .social-media {
+    margin-right: 20px;
+  }
+  
+  .social-media h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .social-media li {
+    margin-right: 10px;
+  }
+  
+  .social-media a {
+    color: #eee7e7;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    color: #eee7e7;
+  }
+  
+  .footer-links {
+    margin-left: 20px;
+  }
+  
+  .footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #eee7e7;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #eee7e7;
+  }
+  
+  

@@ -1,0 +1,70 @@
+
+<html>
+<head>
+    <title>Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-4xl flex">
+        <div class="w-1/2 p-8">
+            <h2 class="text-2xl font-bold mb-4">Access exclusive features with a free account</h2>
+            <ul class="space-y-4">
+                <li class="flex items-start">
+                    <i class="fas fa-folder-open text-xl mr-4"></i>
+                    <span>Save and sort your favorite assets with Collections</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-share-alt text-xl mr-4"></i>
+                    <span>Share Collections with anyone, anywhere</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-download text-xl mr-4"></i>
+                    <span>Try before you purchase with downloadable comps</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-eye text-xl mr-4"></i>
+                    <span>Easily keep track of your download and browsing history</span>
+                </li>
+            </ul>
+            <p class="mt-4">Plus much more.</p>
+        </div>
+        <div class="w-1/2 p-8 border-l">
+            <h2 class="text-2xl font-bold mb-4">Create your free account</h2>
+            <form id="signupForm"> <!-- Added ID here -->
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <div class="relative">
+                        <input type="password" id="password" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <i class="fas fa-eye absolute right-3 top-3 text-gray-500 cursor-pointer" id="togglePassword" onclick="togglePasswordVisibility()"></i>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-red-500 text-white py-2 rounded-md text-sm font-medium hover:bg-red-600">Get started</button>
+                <div class="mt-4">
+                    <button type="button" class="w-full flex items-center justify-center py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                        <i class="fab fa-google mr-2"></i> Continue with Google
+                    </button>
+                </div>
+                <div class="mt-2">
+                    <button type="button" class="w-full flex items-center justify-center py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                        <i class="fab fa-facebook-f mr-2"></i> Continue with Facebook
+                    </button>
+                </div>
+                <div class="mt-2">
+                    <button type="button" class="w-full flex items-center justify-center py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                        <i class="fab fa-apple mr-2"></i> Continue with Apple
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 mt-4">By creating an account, I agree to Shutterstock's <a href="#" class="text-blue-500">Website Terms</a>, <a href="#" class="text-blue-500">Privacy Policy</a>, and <a href="#" class="text-blue-500">Licensing Terms</a></p>
+                <p class="text-sm text-gray-500 mt-4">Already have an account? <a href="#" class="text-blue-500">Log in</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"> </script>
+</body>
+</html>
+

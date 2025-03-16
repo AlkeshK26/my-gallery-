@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Payment Option</h2>
+        <form id="paymentForm">
+            <label for="paymentMethod">Choose a payment method:</label>
+            <select id="paymentMethod" required>
+                <option value="">Select...</option>
+                <option value="paytm">Paytm</option>
+                <option value="googlePay">Google Pay</option>
+                <option value="phonePay">Phone Pay</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="creditCard">Credit Card</option>
+                <option value="netBanking">Net Banking</option>
+            </select>
+
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" value="25" readonly required>
+
+            <button id="buyButton" type="submit">Proceed to Pay</button>
+        </form> 
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

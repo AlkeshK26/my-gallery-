@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="home.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="home.js" defer></script> n/
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./images/image.html">Images</a></li>
+            <li>
+                <label  style = "color: white;"language-toggle id="language-toggle">Language </label>
+                <div id="language-dropdown" class="language-dropdown">
+                    <div data-lang="en">English</div>
+                    <div data-lang="es">Spanish</div>
+                    <div data-lang="fr">French</div>
+                    <div data-lang="de">German</div>
+                    <div data-lang="it">Italian</div>
+                    <div data-lang="zh">Chinese</div>
+                    <div data-lang="ja">Japanese</div>
+                    <div data-lang="pt">Portuguese</div>
+                    <div data-lang="ar">Arabic</div>
+                </div>
+            </li>
+            <li><a href="./template/temp.html">Template</a></li>
+            <li><a href="./blog/index.html">Blog</a></li>
+            <li><a href="./enterprise/index.html">Enterprise</a></li>
+            <li><a href="./about us/about.html">About</a></li>
+            <li><a href="./help/help.html">Help</a></li>
+            <li><a href="./login/login.html">Login</a></li>
+            <li><a href="./sign up/sign up.html">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<br />
+<br />
+<br />
+<p id="welcome-message">One library, millions of ways to tell your story</p>
+<br />
+<br />
+<br />
+<div class="one">
+  <div class="card">
+      <a href="./images/image.html">
+          <img src="WhatsApp Image 2024-10-03 at 14.37.31_a1385bd2.jpg" alt="Upper Body" />
+      </a>
+      <h2 id="card-images">IMAGES</h2>
+  </div>
+  
+  <div class="card">
+      <a href="./template/temp.html">
+          <img src="WhatsApp Image 2024-10-03 at 14.37.33_e6037252.jpg" alt="Upper Body" />
+      </a>
+      <h2 id="card-template">TEMPLATE</h2>
+  </div>
+
+  <div class="card">
+      <a href="./blog/index.html">
+          <img src="WhatsApp Image 2024-10-03 at 14.37.33_e2fa4a76.jpg" alt="Upper Body" />
+      </a>
+      <h2 id="card-blog">BLOG</h2>
+  </div>
+
+  <div class="card">
+      <a href="./home workout/index.html">
+          <img src="WhatsApp Image 2024-10-03 at 14.37.34_d60dfaaf.jpg" alt="Upper Body" />
+      </a>
+      <h2 id="card-enterprise">ENTERPRISE</h2>
+  </div>
+
+  <div class="card">
+      <a href="./about us/about.html">
+          <img src="WhatsApp Image 2024-10-03 at 14.37.35_92faa84f.jpg" alt="Upper Body" />
+      </a>
+      <h2 id="card-about">ABOUT US</h2>
+  </div>
+
+  <div class="card">
+      <a href="./help/help.html">
+          <img src="WhatsApp Image 2024-10-03 at 14.37.35_4f1a0750.jpg" alt="Upper Body" />
+      </a>
+      <h2 id="card-help">HELP</h2>
+  </div>
+
+  <div class="card">
+      <a href="./sign up/sign up.html">
+          <img src="depositphotos_65314611-stock-photo-sign-up.jpg" alt="Upper Body" />
+      </a>
+      <h2 id="card-signup">SIGN UP</h2>
+  </div>
+
+  <div class="card">
+      <a href="./login/login.html">
+          <img src="user_login_man-1024.webp" alt="Upper Body" />
+      </a>
+      <h2 id="card-login">LOG IN</h2>
+  </div>
+</div>
+
+<p id="footer-text">Get as many images as you need—no more, no less.</p>
+
+<footer>
+    <div class="footer-container">
+        <div class="social-media">
+            <h3>Follow us on social media:</h3>
+            <ul>
+                <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
+                <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h3>Important links:</h3>
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const languageToggle = document.getElementById('language-toggle');
+    const languageDropdown = document.getElementById('language-dropdown');
+
+    languageToggle.addEventListener('click', () => {
+        // Toggle the visibility of the dropdown
+        languageDropdown.style.display = languageDropdown.style.display === 'none' || languageDropdown.style.display === '' ? 'block' : 'none';
+        
+        // Scroll to the dropdown
+        languageDropdown.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Close the dropdown if clicked outside of it
+    window.addEventListener('click', (event) => {
+        if (!languageToggle.contains(event.target) && !languageDropdown.contains(event.target)) {
+            languageDropdown.style.display = 'none';
+        }
+    });
+
+    // Change language on selection
+    languageDropdown.querySelectorAll('div').forEach(item => {
+        item.addEventListener('click', (event) => {
+            const selectedLanguage = event.target.getAttribute('data-lang');
+            changeLanguage(selectedLanguage);
+            languageDropdown.style.display = 'none'; // Hide dropdown after selection
+        });
+    });
+
+
+    const translations = {
+      en: {
+          welcomeMessage: "One library, millions of ways to tell your story",
+          footerText: "Get as many images as you need—no more, no less.",
+          cardImages: "IMAGES",
+          cardTemplate: "TEMPLATE",
+          cardBlog: "BLOG",
+          cardEnterprise: "ENTERPRISE",
+          cardAbout: "ABOUT US",
+          cardHelp: "HELP",
+          cardSignup: "SIGN UP",
+          cardLogin: "LOG IN",
+      },
+      es: {
+          welcomeMessage: "Una biblioteca, millones de formas de contar tu historia",
+          footerText: "Obtén tantas imágenes como necesites, ni más ni menos.",
+          cardImages: "IMÁGENES",
+          cardTemplate: "PLANTILLA",
+          cardBlog: "BLOG",
+          cardEnterprise: "EMPRESA",
+          cardAbout: "SOBRE NOSOTROS",
+          cardHelp: "AYUDA",
+          cardSignup: "REGISTRARSE",
+          cardLogin: "INICIAR SESIÓN",
+      },
+      fr: {
+          welcomeMessage: "Une bibliothèque, des millions de façons de raconter votre histoire",
+          footerText: "Obtenez autant d'images que vous le souhaitez, pas plus, pas moins.",
+          cardImages: "IMAGES",
+          cardTemplate: "MODÈLE",
+          cardBlog: "BLOG",
+          cardEnterprise: "ENTREPRISE",
+          cardAbout: "À PROPOS DE NOUS",
+          cardHelp: "AIDE",
+          cardSignup: "S'INSCRIRE",
+          cardLogin: "SE CONNECTER",
+      },
+      de: {
+          welcomeMessage: "Eine Bibliothek, Millionen von Möglichkeiten, Ihre Geschichte zu erzählen",
+          footerText: "Holen Sie sich so viele Bilder, wie Sie benötigen - nicht mehr, nicht weniger.",
+          cardImages: "BILDER",
+          cardTemplate: "VORLAGE",
+          cardBlog: "BLOG",
+          cardEnterprise: "UNTERNEHMEN",
+          cardAbout: "ÜBER UNS",
+          cardHelp: "HILFE",
+          cardSignup: "ANMELDUNG",
+          cardLogin: "ANMELDEN",
+      },
+      it: {
+          welcomeMessage: "Una biblioteca, milioni di modi per raccontare la tua storia",
+          footerText: "Ottieni tutte le immagini di cui hai bisogno, né di più né di meno.",
+          cardImages: "IMMAGINI",
+          cardTemplate: "MALLO",
+          cardBlog: "BLOG",
+          cardEnterprise: "IMPRESA",
+          cardAbout: "CHI SIAMO",
+          cardHelp: "AIUTO",
+          cardSignup: "ISCRIVITI",
+          cardLogin: "ACCEDI",
+      },
+      zh: {
+          welcomeMessage: "一个图书馆，讲述故事的无数种方式",
+          footerText: "获取所需的所有图像，既不多也不少。",
+          cardImages: "图片",
+          cardTemplate: "模板",
+          cardBlog: "博客",
+          cardEnterprise: "企业",
+          cardAbout: "关于我们",
+          cardHelp: "帮助",
+          cardSignup: "注册",
+          cardLogin: "登录",
+      },
+      ja: {
+          welcomeMessage: "一つの図書館、物語を語るための無数の方法",
+          footerText: "必要なだけの画像を取得してください。多すぎず、少なすぎず。",
+          cardImages: "画像",
+          cardTemplate: "テンプレート",
+          cardBlog: "ブログ",
+          cardEnterprise: "企業",
+          cardAbout: "私たちについて",
+          cardHelp: "ヘルプ",
+          cardSignup: "サインアップ",
+          cardLogin: "ログイン",
+      },
+      pt: {
+          welcomeMessage: "Uma biblioteca, milhões de maneiras de contar sua história",
+          footerText: "Obtenha tantas imagens quanto precisar — nem mais, nem menos.",
+          cardImages: "IMAGENS",
+          cardTemplate: "TEMPLATE",
+          cardBlog: "BLOG",
+          cardEnterprise: "EMPRESA",
+          cardAbout: "SOBRE NÓS",
+          cardHelp: "AJUDA",
+          cardSignup: "CADASTRAR",
+          cardLogin: "LOGIN",
+      },
+      ar: {
+          welcomeMessage: "مكتبة واحدة، ملايين الطرق لرواية قصتك",
+          footerText: "احصل على عدد الصور التي تحتاجها - لا أكثر، ولا أقل.",
+          cardImages: "صور",
+          cardTemplate: "قالب",
+          cardBlog: "مدونة",
+          cardEnterprise: "شركة",
+          cardAbout: "عنّا",
+          cardHelp: "مساعدة",
+          cardSignup: "تسجيل",
+          cardLogin: "دخول",
+      },
+      // Add more languages as needed
+  };
+  
+  function changeLanguage(selectedLanguage) {
+      // Update the content based on the selected language
+      document.getElementById('welcome-message').innerText = translations[selectedLanguage].welcomeMessage;
+      document.getElementById('footer-text').innerText = translations[selectedLanguage].footerText;
+      document.getElementById('card-images').innerText = translations[selectedLanguage].cardImages;
+      document.getElementById('card-template').innerText = translations[selectedLanguage].cardTemplate;
+      document.getElementById('card-blog').innerText = translations[selectedLanguage].cardBlog;
+      document.getElementById('card-enterprise').innerText = translations[selectedLanguage].cardEnterprise;
+      document.getElementById('card-about').innerText = translations[selectedLanguage].cardAbout;
+      document.getElementById('card-help').innerText = translations[selectedLanguage].cardHelp;
+      document.getElementById('card-signup').innerText = translations[selectedLanguage].cardSignup;
+      document.getElementById('card-login').innerText = translations[selectedLanguage].cardLogin;
+  }
+</script>
+
+</body>
+</html>
+
+
